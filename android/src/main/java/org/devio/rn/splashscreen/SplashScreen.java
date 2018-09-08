@@ -17,6 +17,7 @@ import java.lang.ref.WeakReference;
 public class SplashScreen {
     private static Dialog mSplashDialog;
     private static WeakReference<Activity> mActivity;
+    private static ProgressBar mProgress;
 
     /**
      * 打开启动屏
@@ -35,6 +36,8 @@ public class SplashScreen {
                     if (!mSplashDialog.isShowing()) {
                         mSplashDialog.show();
                     }
+
+                    mProgress = (ProgressBar) findViewById(R.id.splash_screen_progress_bar);
                 }
             }
         });
